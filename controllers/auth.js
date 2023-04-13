@@ -4,6 +4,7 @@ const bcrypt = require('bcryptjs');
 
 const Usuario = require('../models/usuario');
 const { generarToken } = require('../helpers/jwt');
+const usuario = require('../models/usuario');
 
 
 const crearUsuario = async (req, res = response) => {
@@ -101,9 +102,8 @@ const tokenUser = async(req, res = response) => {
 
     res,json({
         ok: true,
-        msg: 'Token',
-        uid: req.uid,
-        usuario
+        usuario,
+        token
     });
 }
 
