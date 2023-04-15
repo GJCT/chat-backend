@@ -11,7 +11,7 @@
     <script src="socket.io/socket.io.js"></script>
 
     <script>
-        var socket = io();
+        const socket = io();
 
         socket.on('connect', function() {
             console.log('Conectado al servidor')

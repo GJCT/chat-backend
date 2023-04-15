@@ -22,7 +22,9 @@ const publicPath = path.resolve( __dirname, 'public' );
 app.use( express.static( publicPath ) );
 
 // Mis rutas
-app.use('/api', require('./routes/auth'));
+app.use('/api', require('./routes/auth.js'));
+app.use('/api/usuarios', require('./routes/usuarios.js'));
+app.use('/api/mensajes', require('./routes/messages.js'));
 
 
 
